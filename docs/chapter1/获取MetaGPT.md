@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 1. 获取MetaGPT
 
 - 使用pip获取MetaGPT  

@@ -8,6 +8,7 @@ site_description: 全面深入的agent学习开发指南
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   features:
     # - announce.dismiss
@@ -49,8 +50,8 @@ theme:
   font:
     text: Noto Sans SC
     code: Fira Code
-  favicon: overrides/assets/images/Zombatar_2.jpg
-  logo: overrides/assets/images/Zombatar_2.jpg
+  favicon: assets/images/Zombatar_2.jpg
+  logo: assets/images/Zombatar_2.jpg
   icon:
     logo: logo
     repo: fontawesome/brands/github
