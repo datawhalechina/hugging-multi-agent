@@ -100,9 +100,7 @@ MetaGPT:https://github.com/geekan/MetaGPT
 - [x] 发布第一版内容内测
 - [x] 发布第一版内容公测
 - [x] 飞书内容迁移仓库
-- [ ] 更新 agent tools 内容
-- [ ] 更新 agent rag 内容
-- [ ] 更新多智能体内容
+- [x] 更新多智能体内容
 
 ## 参与贡献
 
@@ -120,8 +118,8 @@ MetaGPT:https://github.com/geekan/MetaGPT
 | 陈叶帆 | 核心贡献者 | MetaGPT成员 |
 | 沈楚城 | 核心贡献者 | MetaGPT成员 |
 | 郑蕲 | 核心贡献者 | MetaGPT成员 |
-
-
+| 李柯辰 | 贡献者 | Datawhale成员 |
+| 回车 | 贡献者 |  |
 
 ## 关注我们
 
