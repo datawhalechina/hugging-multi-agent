@@ -11,7 +11,7 @@ metagpt可以直接用 pip 来获取至本地环境中，这样我们就可以�
 
 ```bash
 pip install metagpt
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple metagpt==0.5.2（推荐）
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple metagpt==0.6.6（推荐）
 ```
 
 通过在终端内运行下面的代码来获取最新版metagpt来体验最新功能
