@@ -50,8 +50,8 @@ theme:
   font:
     text: Noto Sans SC
     code: Fira Code
-  favicon: assets/images/Zombatar_2.jpg
-  logo: assets/images/Zombatar_2.jpg
+  favicon: assets/images/logo.jpg
+  logo: assets/images/logo.jpg
   icon:
     logo: logo
     repo: fontawesome/brands/github
