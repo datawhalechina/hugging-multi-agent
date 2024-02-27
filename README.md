@@ -130,7 +130,7 @@ MetaGPT:https://github.com/geekan/MetaGPT
 
 <div align=center>
 <p>扫描下方二维码关注公众号：MetaGPT</p>
-<img src="D:\Datawhale\hugging-multi-agent\overrides\assets\images\metagpt.jpg" width = "180" height = "180">
+<img src="https://s11.ax1x.com/2024/02/27/pFdMASK.jpg" width = "180" height = "180">
 </div>
 
 ## LICENSE
