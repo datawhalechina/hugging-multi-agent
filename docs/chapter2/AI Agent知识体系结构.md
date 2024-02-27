@@ -45,7 +45,7 @@ Baby AGI 是一个 python 脚本，它使用 OpenAI 和 Pinecone API 以及 Lang
 
 ![steps](/docs/chapter2/img/steps.png)
 
-​																					来自 https://github.com/yoheinakajima/babyagi 的图片
+​																					              来自 https://github.com/yoheinakajima/babyagi 的图片
 
 这个过程在为智能体创建一个目标或主任务后，主要分为以下三个步骤：
 
@@ -245,8 +245,8 @@ MetaGPT 以一行需求为输入，输出用户故事/竞争分析/需求/数据
 ![starhistory](/docs/chapter2/img/starhistory.png)
 
 1. **现状：**[MetaGPT](https://github.com/geekan/MetaGPT/)目前解决了软件工程的中程任务，**让用户不再只是与ChatGPT聊天，而是真正与智能体协作**。因此，MetaGPT获得了来自全世界的广泛好评（多天世界第一），也带来了全世界工程师、投资人的诸多关注，吸引了多位顶级贡献者（背景有字节AILab / 叮咚算法 / 小红书算法 / 百度 / MSRA / TikTok / bloomgpt infra / bilibili / CUHK / 港科 / CMU / UCB等背景）
-2. **目标：**希望能够拓展到任意行业任意天数的任务
-3. **关键点：**ChatGPT只解决了聊天，并没有解决协作。而智能体可以与人类协作，意味着智能体会成为互联网级别的入口，并且会存在于大量的IM、硬件之中，取代已有的大量SaaS
+2. **目标：** 希望能够拓展到任意行业任意天数的任务
+3. **关键点：** ChatGPT只解决了聊天，并没有解决协作。而智能体可以与人类协作，意味着智能体会成为互联网级别的入口，并且会存在于大量的IM、硬件之中，取代已有的大量SaaS
 
 ### 2.2.4 **其他多智能体框架**
 
