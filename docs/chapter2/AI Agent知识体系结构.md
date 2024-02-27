@@ -45,7 +45,8 @@ Baby AGI 是一个 python 脚本，它使用 OpenAI 和 Pinecone API 以及 Lang
 
 ![steps](/docs/chapter2/img/steps.png)
 
-​																					              来自 https://github.com/yoheinakajima/babyagi 的图片
+​																					              <p align="center">来自 https://github.com/yoheinakajima/babyagi 的图片</p>
+
 
 这个过程在为智能体创建一个目标或主任务后，主要分为以下三个步骤：
 
