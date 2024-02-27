@@ -109,7 +109,7 @@ sub_tasks = openai.ChatCompletion.create(
 ![agentarch](/docs/chapter2/img/agentarch.png)
 
 
-​															图 13. 生成Agents架构。（图片来源：[Park 等人，2023](https://arxiv.org/abs/2304.03442)）
+​															                   图 13. 生成Agents架构。（图片来源：[Park 等人，2023](https://arxiv.org/abs/2304.03442)）
 
 这种有趣的模拟会产生新兴的社交行为，例如信息传播、关系记忆（例如，两个Agents继续讨论话题）和社交活动的协调（例如举办聚会并邀请许多其他人）。
 
