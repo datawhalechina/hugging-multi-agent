@@ -26,7 +26,7 @@ ChatGPT接收单一查询的输入并返回输出，它一次不能完成超过�
 
 ​	￮ Agents学习调用外部 API 来获取模型权重中缺失的额外信息（通常在预训练后很难更改），包括当前信息、代码执行能力、对专有信息源的访问等。
 
-![agentstest](docs/chapter2/img/agentstest.png)
+![agentstest](docs/chapter2/img/agent.png)
 
 
 ​                        
@@ -43,7 +43,7 @@ Baby AGI 是一个 python 脚本，它使用 OpenAI 和 Pinecone API 以及 Lang
 
 这是通过使用 OpenAI 的自然语言处理 （NLP） 功能实现的，该功能允许系统根据目标创建新任务。它使用 Pinecone 来存储该特定任务的结果并检索上下文，并使用 LangChain 框架来处理决策过程。
 
-<img src="https://pic.imgdb.cn/item/65ddc41c9f345e8d03598a9b.png">
+![steps](/docs/chapter2/img/steps.png)
 
 ​																					来自 https://github.com/yoheinakajima/babyagi 的图片
 
@@ -106,7 +106,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 ​	￮ 规划和反应时都会考虑主体之间的关系以及一个主体对另一个主体的观察。环境信息以树形结构呈现。
 
-<img src="https://pic.imgdb.cn/item/65ddc4049f345e8d035944dc.png">
+![agentarch](/docs/chapter2/img/agentarch.png)
 
 
 ​															图 13. 生成Agents架构。（图片来源：[Park 等人，2023](https://arxiv.org/abs/2304.03442)）
@@ -117,7 +117,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 微软亚洲研究院、北大、北航等机构的研究人员，通过97个回合的「苏格拉底式」严格推理，成功让GPT-4得出了「P≠NP」的结论！
 
-<img src="https://pic.imgdb.cn/item/65ddc4049f345e8d035945ed.png">
+![paper](/docs/chapter2/img/paper.png)
 
 ​															                      论文地址：https://arxiv.org/abs/2309.05689
 
@@ -135,7 +135,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 他们引入了**五个不同的角色（比如精通概率论的数学家），作为协助证明者，根据自己擅长证明不同的部分。**
 
-<img src="https://pic.imgdb.cn/item/65ddc4049f345e8d03594648.png">
+![paper2](/docs/chapter2/img/paper2.png)
 
 简单讲，苏格拉底方法就是让我们「一步一步思考」，提出一系列问题激发批判性思维。
 
@@ -149,13 +149,13 @@ sub_tasks = openai.ChatCompletion.create(
 
 通过发掘新的见解和观点，将复杂问题分解为子问题或步骤，并通过质疑回答进行自我完善。
 
-<img src="https://pic.imgdb.cn/item/65ddc4179f345e8d03597aa1.png">
+![paper3](/docs/chapter2/img/paper3.png)
 
 一般来说，在处理可以直接从推理中得出结论的问题时，会采用「演绎模式」（如 「让我们一步步思考」）来指导LLM直接得出结论。
 
 对于更复杂的问题，首先要求LLM将问题转化为新问题，或分解为若干子问题。然后，通过递归方法，直到找到「原子问题」。
 
-<img src="https://pic.imgdb.cn/item/65ddc4179f345e8d03597b4f.png">
+![pvsnp](/docs/chapter2/img/pvsnp.png)
 
 ​																					  P vs. NP问题对话转换示例
 
@@ -169,17 +169,17 @@ sub_tasks = openai.ChatCompletion.create(
 
 第一件事是关于系统 1 与系统 2 类型思维的概念，这个概念是由《思考，快与慢》这本书所普及的，所以这个区别是什么？这个想法是你的大脑可以以两种不同的模式运行。系统 1 思维是你的大脑的快速、本能和自动化的部分，所以例如，如果我问你 2+2 等于多少，你实际上并没有做数学计算。
 
-<img src="https://pic.imgdb.cn/item/65ddc41c9f345e8d03598ac0.png"  />
+![system2](/docs/chapter2/img/system2.png)
 
 你只是告诉我它等于四，因为这是可用的，已经存在于你的大脑中，是本能的。但是当我告诉你 17*24 等于多少时，你并没有准备好这个答案，所以你会启动你的大脑的另一部分，这部分更加理性，更加缓慢，进行复杂的决策，感觉更有意识。你不得不在脑海中解决这个问题，然后给出答案。
 
 另一个例子是，如果你们中的一些人可能下象棋，当你进行快速象棋比赛时，你没有时间思考，所以你只是根据直觉移动棋子。这时大部分由你的系统 1 来处理。但如果你在比赛中，有更多时间来思考，那么你会更多地参与到决策中，你会感到自己在建立可能性的树，这是一个更有意识、更费力的过程。你必须在脑海中解决问题并给出答案。
 
-<img src="https://pic.imgdb.cn/item/65ddc41d9f345e8d03598b05.png"  />
+
 
 现在事实证明， LLM 目前只有系统 1。它们只有这个本能部分。它们不能思考并推理出各种可能性。它们只是按顺序输入单词，并且基本上这些语言模型有一个神经网络，可以给出下一个单词，所以它就像右边的漫画一样，你只是在跟踪轨迹，这些语言模型基本上只是不断发出声音，这就是它们按照序列采样单词的方式。每个这样的块大致需要相同的时间，所以这基本上是 LLM 在系统 1 设置中的工作方式，所以很多人认为，赋予 LLM 系统 2 的能力会给人们带来灵活的时间，让它们更深入地思考问题，反思和重新表述，然后以更有信心的答案回来，所以你可以想象将时间表示为 x 轴，某种响应的准确度表示为 y 轴，当你绘制它时，你希望它是一个单调递增的函数。
 
-
+![system2two](/docs/chapter2/img/system2two.png)
 
 今天这并不是这种情况，但很多人都在考虑这个问题，如何实际上创建一种思考的树状结构，思考问题，并反思和重新表述，然后回答时模型会更有信心，所以你可以想象将时间表示为 x 轴，某种响应的准确度表示为 y 轴，当你绘制它时，你希望它是一个单调递增的函数。今天这并不是这种情况，但很多人都在考虑这个问题。
 
@@ -187,7 +187,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 https://github.com/e2b-dev/awesome-ai-agents
 
-<img src="https://pic.imgdb.cn/item/65ddc4049f345e8d035945a6.png"  />
+![Aiagentlandscape](/docs/chapter2/img/Aiagentlandscape.png)
 
 ## 2.2 **多智能体框架介绍**
 
@@ -225,7 +225,7 @@ MetaGPT 以一行需求为输入，输出用户故事/竞争分析/需求/数据
 
 在内部，MetaGPT 包括产品经理/架构师/项目经理/工程师。它提供了软件公司的整个过程以及精心编排的 SOP。
 
-<img src="https://pic.imgdb.cn/item/65ddc4179f345e8d03597ba4.png">
+![softwarecompany](/docs/chapter2/img/softwarecompany.png)
 
 1. **需求分析**：收到需求后，该过程开始。这一阶段致力于明确软件所需的功能和要求。
 2. **产品经理**：产品经理以需求和可行性分析为基础，开启整个流程。他们负责理解需求，并为项目制定明确的方向。
@@ -234,7 +234,7 @@ MetaGPT 以一行需求为输入，输出用户故事/竞争分析/需求/数据
 5. **工程师**：工程师负责实际的代码开发。他们使用设计和流程图，将其转化为功能完备的代码。
 6. **质量保证（QA）工程师**：在开发阶段结束后，QA工程师进行全面的测试。他们确保软件符合所需标准，不存在任何错误或问题。
 
-<img src="https://pic.imgdb.cn/item/65ddc4189f345e8d03597c10.png"  />
+![sop](/docs/chapter2/img/sop.png)
 
 ### 2.2.3 **更多关于MetaGPT**
 
@@ -242,7 +242,7 @@ MetaGPT 以一行需求为输入，输出用户故事/竞争分析/需求/数据
 
 以及对应文章：[ICLR 2024 Oral | MetaGPT: LLM Agent领域第一高分论文，全网Star数最高的多智能体框架](https://mp.weixin.qq.com/s/LJFMBSlOJdJuzGh50s2Ugg)
 
-<img src="https://pic.imgdb.cn/item/65ddc4189f345e8d03597c91.png">
+![starhistory](/docs/chapter2/img/starhistory.png)
 
 1. **现状：**[MetaGPT](https://github.com/geekan/MetaGPT/)目前解决了软件工程的中程任务，**让用户不再只是与ChatGPT聊天，而是真正与智能体协作**。因此，MetaGPT获得了来自全世界的广泛好评（多天世界第一），也带来了全世界工程师、投资人的诸多关注，吸引了多位顶级贡献者（背景有字节AILab / 叮咚算法 / 小红书算法 / 百度 / MSRA / TikTok / bloomgpt infra / bilibili / CUHK / 港科 / CMU / UCB等背景）
 2. **目标：**希望能够拓展到任意行业任意天数的任务
