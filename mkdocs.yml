@@ -147,6 +147,7 @@ nav:
 
     - chapter2/index.md
     - 2.1 &nbsp; AI Agent体系介绍: chapter2/AI Agent体系介绍.md
+    - 2.2 &nbsp; 多智能体框架介绍: chapter2/多智能体框架介绍.md
 
   - 参考文献:
     - chapter_reference/index.md
