@@ -26,7 +26,7 @@ ChatGPT接收单一查询的输入并返回输出，它一次不能完成超过�
 
 ​	￮ Agents学习调用外部 API 来获取模型权重中缺失的额外信息（通常在预训练后很难更改），包括当前信息、代码执行能力、对专有信息源的访问等。
 
-![agentstest](docs/chapter2/img/agent.png)
+![agent](/docs/chapter2/img/agent.png)
 
 
 ​                        
