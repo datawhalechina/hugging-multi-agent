@@ -143,5 +143,10 @@ nav:
     - chapter1/index.md
     - 1.1 &nbsp; 获取MetaGPT: chapter1/获取MetaGPT.md
 
+  - 第 2 章 &nbsp; 智能体综述及多智能体框架介绍:
+
+    - chapter2/index.md
+    - 2.1 &nbsp; AI Agent体系介绍: chapter2/AI Agent体系介绍.md
+
   - 参考文献:
     - chapter_reference/index.md
