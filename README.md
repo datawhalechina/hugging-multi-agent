@@ -119,7 +119,9 @@ MetaGPT:https://github.com/geekan/MetaGPT
 | 沈楚城 | 核心贡献者 | MetaGPT成员 |
 | 郑蕲 | 核心贡献者 | MetaGPT成员 |
 | 李柯辰 | 贡献者 | Datawhale成员 |
+| 丁世奇 | 贡献者 |  |
 | 回车 | 贡献者 |  |
+
 
 ## 关注我们
 
