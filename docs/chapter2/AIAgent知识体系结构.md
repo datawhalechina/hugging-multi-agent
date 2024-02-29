@@ -29,7 +29,8 @@ ChatGPT接收单一查询的输入并返回输出，它一次不能完成超过�
 
 ​                        
 
-​                                     图 1. LLM 驱动的自主Agents系统概述参考[LLM Powered Autonomous AgentsLilian Weng（OpenAI研究主管）](https://lilianweng.github.io/posts/2023-06-23-agent/)
+​                         <p align="center">图 1. LLM 驱动的自主Agents系统概述参考[LLM Powered Autonomous AgentsLilian Weng（OpenAI研究主管）](https://lilianweng.github.io/posts/2023-06-23-agent/)</p>
+            
 
 在后续章节中我们将一一用代码用例实际带大家体验如何开发Agent，打通规划，记忆，工具调用等能力。
 
@@ -43,8 +44,7 @@ Baby AGI 是一个 python 脚本，它使用 OpenAI 和 Pinecone API 以及 Lang
 
 ![steps](img/steps.png)
 
-​																					来自 https://github.com/yoheinakajima/babyagi 的图片
-
+​									<p align="center">	来自 https://github.com/yoheinakajima/babyagi 的图片</p>					
 这个过程在为智能体创建一个目标或主任务后，主要分为以下三个步骤：
 
 1. 获取第一个未完成的任务
@@ -78,11 +78,11 @@ sub_tasks = openai.ChatCompletion.create(
 
 生成Agents的设计将 LLM 与记忆、规划和反射机制相结合，使Agents能够根据过去的经验进行行为，并与其他Agents进行交互。
 
-• **记忆流：**是一个长期记忆模块（外部数据库），用自然语言记录智能体经验的完整列表。
+• **记忆流：** 是一个长期记忆模块（外部数据库），用自然语言记录智能体经验的完整列表。
 
 ​	￮ 每个元素都是一个观察结果，是由 Agent 直接提供的事件。代理人之间的交流可以引发新的自然语言陈述。
 
-• **检索模型：**根据相关性、新近度和重要性，呈现上下文以告知Agents的行为。
+• **检索模型：** 根据相关性、新近度和重要性，呈现上下文以告知Agents的行为。
 
 ​	￮ 新近度：最近发生的事件得分较高
 
@@ -90,7 +90,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 ​	￮ 相关性：基于它与当前情况/查询的相关程度。
 
-• **反射机制：**随着时间的推移将记忆合成更高层次的推论，并指导智能体未来的行为。它们是*对过去事件的更高层次的总结（<-注意，这与上面的*[自我反思](https://lilianweng.github.io/posts/2023-06-23-agent/#self-reflection)有点不同）
+• **反射机制：** 随着时间的推移将记忆合成更高层次的推论，并指导智能体未来的行为。它们是*对过去事件的更高层次的总结（<-注意，这与上面的*[自我反思](https://lilianweng.github.io/posts/2023-06-23-agent/#self-reflection)有点不同）
 
 ​	￮ 提示 LM 提供 100 个最新观察结果，并根据这些观测/陈述生成3个最重要的高层次问题。然后让LM回答这些问题。
 
@@ -106,8 +106,8 @@ sub_tasks = openai.ChatCompletion.create(
 
 ![agentarch](img/agentarch.png)
 
-
-​															图 13. 生成Agents架构。（图片来源：[Park 等人，2023](https://arxiv.org/abs/2304.03442)）
+ <p align="center">	图 13. 生成Agents架构。（图片来源：[Park 等人，2023](https://arxiv.org/abs/2304.03442)）</p>			
+​														
 
 这种有趣的模拟会产生新兴的社交行为，例如信息传播、关系记忆（例如，两个Agents继续讨论话题）和社交活动的协调（例如举办聚会并邀请许多其他人）。
 
@@ -117,7 +117,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 ![paper](img/paper.png)
 
-​															                      论文地址：https://arxiv.org/abs/2309.05689
+​															                 <p align="center">论文地址：https://arxiv.org/abs/2309.05689</p>			     
 
 1971年，数学家Stephen A. Cook和Leonid Levin相对独立地提出这个问题：两个复杂度类P和NP是否是恒等的？
 
@@ -155,7 +155,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 ![pvsnp](img/pvsnp.png)
 
-​																					  P vs. NP问题对话转换示例
+​																			 <p align="center">P vs. NP问题对话转换示例</p>			     
 
 在生成新问题或得出新结论时，通过「验证模式」，利用LLM自我批判能力进行验证和完善。
 
