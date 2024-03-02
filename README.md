@@ -99,8 +99,14 @@ MetaGPT:https://github.com/geekan/MetaGPT
 
 - [x] 发布第一版内容内测
 - [x] 发布第一版内容公测
-- [x] 飞书内容迁移仓库
 - [x] 更新多智能体内容
+- [ ] 飞书内容迁移仓库
+- [ ] 引入 python 并发编程基础
+- [ ] werewolf_game 复现分析
+- [ ] minecraft 项目复现分析
+- [ ] agent + RL OverCooked AI Agent 解决方案
+- [ ] llm 角度看agent实现（agent实现的底层原理）
+
 
 ## 参与贡献
 
@@ -118,6 +124,7 @@ MetaGPT:https://github.com/geekan/MetaGPT
 | 陈叶帆 | 核心贡献者 | MetaGPT成员 |
 | 沈楚城 | 核心贡献者 | MetaGPT成员 |
 | 郑蕲 | 核心贡献者 | MetaGPT成员 |
+| 徐宗泽 | 核心贡献者 | MetaGPT成员 |
 | 李柯辰 | 贡献者 | Datawhale成员 |
 | 丁世奇 | 贡献者 |  |
 | 回车 | 贡献者 |  |
