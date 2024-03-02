@@ -2,7 +2,7 @@
 
 ### 3.4.1 需求分析
 
-![require](/docs/chapter3/img/require.png)
+![require](img/require.png)
 
 假设现在我们不仅希望用自然语言编写代码，而且还希望生成的代码立即执行。一个拥有多个动作的智能体可以满足我们的需求。让我们称之为RunnableCoder，一个既写代码又立即运行的 Role。我们需要两个 Action：SimpleWriteCode 和 SimpleRunCode
 

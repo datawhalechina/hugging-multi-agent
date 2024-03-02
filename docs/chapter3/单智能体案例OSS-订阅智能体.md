@@ -1,6 +1,6 @@
 ## 3.6 单智能体案例 OSS - 订阅智能体
 
-![oss](/docs/chapter3/img/oss.png)
+![oss](img/oss.png)
 
 ### 3.6.1 基本介绍
 
@@ -111,7 +111,7 @@ GLOBAL_PROXY: http://127.0.0.1:8118  # 改成自己的代理服务器地址
 
 我们先来完成网页爬取的功能，我们教程直接爬取当天不分国家语言和编程语言的热门仓库进行分析，如果有特殊要求，爬取加上筛选条件条件后网页即可。我们先打开https://github.com/trending 网页，观察网页内容，找到我们需要的内容对应的 html 元素，
 
-![github](/docs/chapter3/img/github.png)
+![github](img/github.png)
 
 如果熟悉爬虫的就可以直接写爬取和解析脚本了，如果不熟悉的也没关系，我们可以
 用 ChatGPT 辅助开发：
@@ -141,11 +141,11 @@ with open("github-trending-slim.html", "w") as f:
 
 删减前：
 
-![html](/docs/chapter3/img/html.png)
+![html](img/html.png)
 
 删减后:
 
-![html2](/docs/chapter3/img/html2.png)
+![html2](img/html2.png)
 
 此时大小仅12k，这时候我们就可以用ChatGPT帮我们写爬取分析Github Trending的代码了，可以参考以下的对话：
 
@@ -537,11 +537,11 @@ async def discord_callback(msg: Message):
 
 **DISCORD_TOKEN**参考官方文档[discord readthedocs](https://discordpy.readthedocs.io/en/stable/discord.html)，"Creating a Bot Account"章节的第7步：
 
-![discord1](/docs/chapter3/img/discord1.png)
+![discord1](img/discord1.png)
 
 DISCORD_CHANNEL_ID即希望Bot发送消息的频道，如下：
 
-![discord2](/docs/chapter3/img/discord2.png)
+![discord2](img/discord2.png)
 
 #### 3.6.6.3 Wechat
 
@@ -600,11 +600,11 @@ async def wxpusher_callback(msg: Message):
 
 **WXPUSHER_TOKEN**即wxpush的APP_TOKEN，参考[官方文档获取appToken](https://wxpusher.zjiecode.com/docs/#/?id=获取apptoken)
 
-![wxpusher1](/docs/chapter3/img/wxpusher1.png)
+![wxpusher1](img/wxpusher1.png)
 
 **WXPUSHER_UIDS**可以从应用管理页的”用户管理->用户列表“获取用户的UID，如果要发送给多个用户，可以用逗号将不同用户UID隔开
 
-![wxpusher2](/docs/chapter3/img/wxpusher2.png)
+![wxpusher2](img/wxpusher2.png)
 
 ### 3.6.7 运行示例
 
@@ -976,11 +976,11 @@ python main.py
 
 - Discord
 
-  ![discordres](/docs/chapter3/img/discordres.png)
+  ![discordres](img/discordres.png)
 
 - WXPusher
 
-  ![wxpublisherres](/docs/chapter3//img/wxpublisherres.png)
+  ![wxpublisherres](img/wxpublisherres.png)
 
 
 
