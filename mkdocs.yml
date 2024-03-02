@@ -149,5 +149,16 @@ nav:
     - 2.1 &nbsp; AI Agent体系介绍: chapter2/AIAgent体系介绍.md
     - 2.2 &nbsp; 多智能体框架介绍: chapter2/多智能体框架介绍.md
 
+  - 第 3 章 &nbsp; 单智能体开发:
+
+    - chapter3/index.md
+    - 3.1 &nbsp; Agent概念概述: chapter3/Agent概念概述.md
+    - 3.2 &nbsp; RoleContext对象分析: chapter3/RoleContext对象分析.md
+    - 3.3 &nbsp; 实现一个单动作Agent: chapter3/实现一个单动作Agent.md
+    - 3.4 &nbsp; 实现一个多动作Agent: chapter3/实现一个多动作Agent.md
+    - 3.5 &nbsp; 实现一个更复杂的Agent：技术文档助手: chapter3/实现一个更复杂的Agent：技术文档助手.md
+    - 3.6 &nbsp; 单智能体案例OSS-订阅智能体: chapter3/单智能体案例OSS-订阅智能体.md
+    - 3.7 &nbsp; 智能体开发作业: chapter3/智能体开发作业.md
+
   - 参考文献:
     - chapter_reference/index.md
