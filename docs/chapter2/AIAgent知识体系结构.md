@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## 2.1 AI Agent体系介绍
 
 ### 2.1.1 什么是AI Agent：
@@ -24,9 +28,9 @@ ChatGPT接收单一查询的输入并返回输出，它一次不能完成超过�
 
 ​	￮ Agents学习调用外部 API 来获取模型权重中缺失的额外信息（通常在预训练后很难更改），包括当前信息、代码执行能力、对专有信息源的访问等。
 
-![agent](img/agent.png)
+![agent](assets/images/agent.png)
 
-
+   
 ​                        
 
 ​                         <p align="center">图 1. LLM 驱动的自主Agents系统概述参考[LLM Powered Autonomous AgentsLilian Weng（OpenAI研究主管）](https://lilianweng.github.io/posts/2023-06-23-agent/)</p>
@@ -42,7 +46,7 @@ Baby AGI 是一个 python 脚本，它使用 OpenAI 和 Pinecone API 以及 Lang
 
 这是通过使用 OpenAI 的自然语言处理 （NLP） 功能实现的，该功能允许系统根据目标创建新任务。它使用 Pinecone 来存储该特定任务的结果并检索上下文，并使用 LangChain 框架来处理决策过程。
 
-![steps](img/steps.png)
+![steps](assets/images/steps.png)
 
 ​									<p align="center">	来自 https://github.com/yoheinakajima/babyagi 的图片</p>					
 这个过程在为智能体创建一个目标或主任务后，主要分为以下三个步骤：
@@ -104,7 +108,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 ​	￮ 规划和反应时都会考虑主体之间的关系以及一个主体对另一个主体的观察。环境信息以树形结构呈现。
 
-![agentarch](img/agentarch.png)
+![agentarch](assets/images/agentarch.png)
 
  <p align="center">	图 13. 生成Agents架构。（图片来源：[Park 等人，2023](https://arxiv.org/abs/2304.03442)）</p>			
 ​														
@@ -115,7 +119,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 微软亚洲研究院、北大、北航等机构的研究人员，通过97个回合的「苏格拉底式」严格推理，成功让GPT-4得出了「P≠NP」的结论！
 
-![paper](img/paper.png)
+![paper](assets/images/paper.png)
 
 ​															                 <p align="center">论文地址：https://arxiv.org/abs/2309.05689</p>			     
 
@@ -133,7 +137,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 他们引入了**五个不同的角色（比如精通概率论的数学家），作为协助证明者，根据自己擅长证明不同的部分。**
 
-![paper2](img/paper2.png)
+![paper2](assets/images/paper2.png)
 
 简单讲，苏格拉底方法就是让我们「一步一步思考」，提出一系列问题激发批判性思维。
 
@@ -147,13 +151,13 @@ sub_tasks = openai.ChatCompletion.create(
 
 通过发掘新的见解和观点，将复杂问题分解为子问题或步骤，并通过质疑回答进行自我完善。
 
-![paper3](img/paper3.png)
+![paper3](assets/images/paper3.png)
 
 一般来说，在处理可以直接从推理中得出结论的问题时，会采用「演绎模式」（如 「让我们一步步思考」）来指导LLM直接得出结论。
 
 对于更复杂的问题，首先要求LLM将问题转化为新问题，或分解为若干子问题。然后，通过递归方法，直到找到「原子问题」。
 
-![pvsnp](img/pvsnp.png)
+![pvsnp](assets/images/pvsnp.png)
 
 ​																			 <p align="center">P vs. NP问题对话转换示例</p>			     
 
@@ -167,7 +171,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 第一件事是关于系统 1 与系统 2 类型思维的概念，这个概念是由《思考，快与慢》这本书所普及的，所以这个区别是什么？这个想法是你的大脑可以以两种不同的模式运行。系统 1 思维是你的大脑的快速、本能和自动化的部分，所以例如，如果我问你 2+2 等于多少，你实际上并没有做数学计算。
 
-![system2](img/system2.png)
+![system2](assets/images/system2.png)
 
 你只是告诉我它等于四，因为这是可用的，已经存在于你的大脑中，是本能的。但是当我告诉你 17*24 等于多少时，你并没有准备好这个答案，所以你会启动你的大脑的另一部分，这部分更加理性，更加缓慢，进行复杂的决策，感觉更有意识。你不得不在脑海中解决这个问题，然后给出答案。
 
@@ -177,7 +181,7 @@ sub_tasks = openai.ChatCompletion.create(
 
 现在事实证明， LLM 目前只有系统 1。它们只有这个本能部分。它们不能思考并推理出各种可能性。它们只是按顺序输入单词，并且基本上这些语言模型有一个神经网络，可以给出下一个单词，所以它就像右边的漫画一样，你只是在跟踪轨迹，这些语言模型基本上只是不断发出声音，这就是它们按照序列采样单词的方式。每个这样的块大致需要相同的时间，所以这基本上是 LLM 在系统 1 设置中的工作方式，所以很多人认为，赋予 LLM 系统 2 的能力会给人们带来灵活的时间，让它们更深入地思考问题，反思和重新表述，然后以更有信心的答案回来，所以你可以想象将时间表示为 x 轴，某种响应的准确度表示为 y 轴，当你绘制它时，你希望它是一个单调递增的函数。
 
-![system2two](img/system2two.png)
+![system2two](assets/images/system2two.png)
 
 今天这并不是这种情况，但很多人都在考虑这个问题，如何实际上创建一种思考的树状结构，思考问题，并反思和重新表述，然后回答时模型会更有信心，所以你可以想象将时间表示为 x 轴，某种响应的准确度表示为 y 轴，当你绘制它时，你希望它是一个单调递增的函数。今天这并不是这种情况，但很多人都在考虑这个问题。
 
@@ -185,5 +189,5 @@ sub_tasks = openai.ChatCompletion.create(
 
 https://github.com/e2b-dev/awesome-ai-agents
 
-![Aiagentlandscape](img/Aiagentlandscape.png)
+![Aiagentlandscape](assets/images/Aiagentlandscape.png)
 

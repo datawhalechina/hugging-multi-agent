@@ -1,6 +1,10 @@
+---
+comments: true
+---
+
 ## 3.2 RoleContext 
 
-而 Role 在与环境上下文进行交互时，是通过内部的 RoleContext 对象来实现的。本 篇我们就来看看 RoleContext 中都有哪些内容。
+而 Role 在与环境上下文进行交互时，是通过内部的 RoleContext 对象来实现的。本篇我们就来看看 RoleContext 中都有哪些内容。
 
 > 代码版本使用 v0.6.6
 

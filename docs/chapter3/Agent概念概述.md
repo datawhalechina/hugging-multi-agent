@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## 3.1 Agent概念概述
 
 在MetaGPT看来，我们把Agent想象成环境中的数字人，其中 Agent = 大语言模型（LLM） + 观察 + 思考 + 行动 + 记忆

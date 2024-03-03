@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## 3.6 单智能体案例 OSS - 订阅智能体
 
 ![oss](assets/images/oss.png)
@@ -980,7 +984,7 @@ python main.py
 
 - WXPusher
 
-  ![wxpublisherres](/docs/chapter3//img/wxpublisherres.png)
+  ![wxpublisherres](assets/images/wxpublisherres.png)
 
 
 

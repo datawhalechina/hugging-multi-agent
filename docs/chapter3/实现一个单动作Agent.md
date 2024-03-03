@@ -1,3 +1,8 @@
+---
+comments: true
+---
+
+
 ## 3.3 实现一个单动作Agent
 
 下面将带领大家利用 MetaGPT 框架实现一个生成代码的 Agent SimpleCoder 我们希 望这个Agent 能够根据我们的需求来生成代码 要自己实现一个最简单的Role，只需要重写Role 基类的 _init_ 与 _act 方法 在 `_init_` 方法中，我们需要声明 Agent 的 `name`（名称）`profile`（类型）

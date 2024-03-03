@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## 3.5 实现一个更复杂的 Agent：技术文档助手
 
 在前文中我们已经介绍了如何实现一个简单的agent帮我们生成代码并执行代码，下 面我们将带领大家实现更复杂的agent，并向大家展示 MetaGPT中关于 agent的更多设计细节，现在试着想想怎么让大模型为我们写一篇技术文档？
@@ -273,7 +277,8 @@ def _init_actions(self, actions):
         # 最后输出的样例 ['0. WriteContent', '1. WriteContent', '2. WriteContent', '3. WriteContent', '4. WriteContent', '5. WriteContent', '6. WriteContent', '7. WriteContent', '8. WriteContent']
 ```
 
-首先我们根据 role 基类中定义的`_init_actions` 方法来看，当我们初始化一个动作时， 这个动作将被加入到 `self._actions` 中，而 self._actions 为一个列表，其中存储了我们 所有的动作。
+首先我们根据 role 基类中定义的`_init_actions` 方法来看，当我们初始化一个动作时， 这个动作将被加入到 `self._actions` 中，而 self._actions 为一个列表，其中存储了我们 所有的动作。  
+
 1. 首先，使用 enumerate函数来同时获取操作列表中的索引 idx 和对应的操作action。
 2. 然后，检查每个 action是否是 Action 类的实例。如果不是，则创建一个新的 Action 实例并赋值给变量 i。 
 3. 如果 action 是 Action 类的实例，会检查是否设置为人工操作（is_human）。如 果是，则会发出警告，并创建一个新的Action实例并将其赋值给变量i。 
@@ -281,7 +286,8 @@ def _init_actions(self, actions):
 5. 将 i 添加到_actions 列表中。
 6. 将表示操作的字符串添加到_states 列表中。 
 
-接着我们来查看Role基类中run方法的实现，当我们启动一个角色使他run时他会如 何工作
+接着我们来查看Role基类中run方法的实现，当我们启动一个角色使他run时他会如何工作  
+
 
 如果有入参message 就将message 添加到 role 的记忆中如果没有入参就观察环境中 的新消息
 
@@ -353,12 +359,15 @@ def _set_state(self, state: int):
     self.rc.todo = self.actions[self.rc.state] if state >= 0 else None
 ```
 
-再来看 self_react()方法
+再来看 self_react()方法  
+
 ￮ 先思考，然后行动，直到角色认为是时候停止并且不需要再做任何事情。
 ￮ 这是ReAct论文中的标准思考-行动循环，在任务解决中交替进行思考和行动，即`_思考 -> _行动 -> _思考 -> _行动 -> ...`
-￮ 使用llm在思考过程中动态选择行动。 
+￮ 使用llm在思考过程中动态选择行动。   
 
-函数中的`actions_taken` 变量用于跟踪已经执行的动作次数。在`while` 循环 中，函数会不断进行思考和行动，直到达到最大循环次数为止。在每次循环中，首先会调用`_think`方法，然后检查是否有待办事项。如果没有待办事项，循环将会终止。如果有待办事项，则会记录当前状态并执行相应的动作，然后增加`actions_taken` 的计数。
+
+函数中的`actions_taken` 变量用于跟踪已经执行的动作次数。在`while` 循环 中，函数会不断进行思考和行动，直到达到最大循环次数为止。在每次循环中，首先会调用`_think`方法，然后检查是否有待办事项。如果没有待办事项，循环将会终止。如果有待办事项，则会记录当前状态并执行相应的动作，然后增加`actions_taken` 的计数。  
+
 最后，函数会返回最后一个动作的输出作为结果。
 
 ```python
@@ -491,11 +500,11 @@ async def _handle_directory(self, titles: Dict) -> Message:
 
 _handle_directory(self, titles: Dict)的GPT分析
 
-> ### 输入：{"title": "xxx", "directory": [{"dir 1": ["sub dir 1", "sub dir 2"]}]}
+>  **输入：{"title": "xxx", "directory": [{"dir 1": ["sub dir 1", "sub dir 2"]}]}**
 >
 > - `titles`字典: 包含教程的标题和目录结构。在这个例子中，标题是`"xxx"`，而目录结构是一个列表，其中包含一个字典，该字典定义了一个名为`"dir 1"`的目录，它又包含两个子目录`"sub dir 1"`和`"sub dir 2"`。
 >
-> ### 函数处理流程
+>  **函数处理流程**
 >
 > 1. 记录教程标题：首先，函数从`titles`字典中提取`"title"`键的值，并将其赋值给`self.main_title`。这里，`self.main_title`将被设置为`"xxx"`。
 > 2. 初始化目录字符串：接着，函数创建一个名为`directory`的字符串，其初始内容是主标题（`self.main_title`），后面跟着一个换行符。
@@ -509,7 +518,7 @@ _handle_directory(self, titles: Dict)的GPT分析
 > 6. 清除待办事项：将`self``.rc.``todo`设置为`None`，表示当前没有更多待处理的事项。
 > 7. 返回目录信息：最后，函数返回一个`Message`对象，其内容是经过格式化的目录字符串`directory`。
 >
-> ### 例子输出
+>   **例子输出**
 >
 > 以输入`{"title": "xxx", "directory": [{"dir 1": ["sub dir 1", "sub dir 2"]}]}`为例，函数输出的`Message`对象的内容将会是：
 >
