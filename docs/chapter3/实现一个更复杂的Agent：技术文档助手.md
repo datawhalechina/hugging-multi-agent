@@ -10,7 +10,7 @@
 
 因为token限制的原因，我们先通过 LLM 大模型生成教程的目录，再对目录按照二级 标题进行分块，对于每块目录按照标题生成详细内容，最后再将标题和内容进行拼接，解决 LLM 大模型长文本的限制问题。
 
-![3.5.1require](/docs/chapter3/img/3.5.1require.png)
+![3.5.1require](assets/images/3.5.1require.png)
 
 ### 3.5.2 编写 WriteDirectory 动作
 
@@ -523,7 +523,7 @@ _handle_directory(self, titles: Dict)的GPT分析
 
 如果你还没有理解，这里我制作了一个简单的思维导图来帮助你梳理这个过程
 
-![flow](/docs/chapter3/img/flow.png)
+![flow](assets/images/flow.png)
 
 ### 3.5.5 运行 TutorialAssistant 角色
 

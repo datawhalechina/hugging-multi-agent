@@ -18,7 +18,7 @@
 
  MetaGPT 中定义的一个agent 运行示例如下：
 
-![metagptagent](/docs/chapter3/img/metagptagent.png)
+![metagptagent](assets/images/metagptagent.png)
 
 • 一个agent在启动后他会观察自己能获取到的信息，加入自己的记忆中 • 下一步进行思考，决定下一步的行动，也就是从 Action1，Action2，Action3 中选择执行的 Action
 • 决定行动后，紧接着就执行对应行动，得到这个环节的结果

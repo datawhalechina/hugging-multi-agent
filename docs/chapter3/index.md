@@ -7,5 +7,3 @@ comments: true
 # 前期准备
 
 本章节内我们将了解将详细了解metagpt并学习如何使用metagpt进行单智能体的开发,通过实现技术文档助手和OSS订阅智能体,进一步带大家感受metagpt的功能
-
-```

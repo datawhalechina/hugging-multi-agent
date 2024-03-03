@@ -8,7 +8,7 @@
 
 要实现一个 `SimpleCoder` 我们需要分析这个Agent 它需要哪些能力
 
-![analyse](/docs/chapter3/img/analyse.png)
+![analyse](assets/images/analyse.png)
 
 首先我们需要让他接受用户的输入的需求，并记忆我们的需求，接着这个Agent它需 要根据自己已知的信息和需求来编写我们需要的代码。
 
@@ -118,7 +118,7 @@ def parse_code(rsp):
 
 在此之前我们需要简单介绍一下 Message，在MetaGPT中，Message 类是最基本的信息类型，Message 的基本组成如下
 
-![Message](/docs/chapter3/img/Message.png)
+![Message](assets/images/Message.png)
 
 在本章节的学习中我们只涉及 content  role  cause_by ，除了content外，其他内容都是可选的
 

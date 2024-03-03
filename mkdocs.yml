@@ -146,7 +146,7 @@ nav:
   - 第 2 章 &nbsp; 智能体综述及多智能体框架介绍:
 
     - chapter2/index.md
-    - 2.1 &nbsp; AI Agent体系介绍: chapter2/AIAgent体系介绍.md
+    - 2.1 &nbsp; AI Agent体系介绍: chapter2/AIAgent知识体系结构.md
     - 2.2 &nbsp; 多智能体框架介绍: chapter2/多智能体框架介绍.md
 
   - 第 3 章 &nbsp; 单智能体开发:
