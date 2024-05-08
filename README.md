@@ -16,6 +16,12 @@
 
 MetaGPT:https://github.com/geekan/MetaGPT
 
+> 注：如果有同学希望了解大模型的模型构成，以及从零手写RAG、Agent和Eval等任务，可以学习Datawhale的另一个项目[Tiny-Universe](https://github.com/datawhalechina/tiny-universe)，大模型是当下深度学习领域的热点，但现有的大部分大模型教程只在与教给大家如何调用api完成大模型的应用，而很少有人能够从原理层面讲清楚模型结构、RAG、Agent 以及 Eval。所以该仓库会提供全部手写，不采用调用api的形式，完成大模型的 RAG 、 Agent 、Eval 任务。
+
+> 注：考虑到有同学希望在学习本项目之前，希望学习大模型的理论部分，如果想要进一步深入学习 LLM 的理论基础，并在理论的基础上进一步认识、应用 LLM，可以参考 Datawhale 的 [so-large-llm](https://github.com/datawhalechina/so-large-lm.git)课程。
+
+> 注：更多与 agent 开发相关的仓库，请参考[agent-tutorial 智能体应用开发](https://github.com/datawhalechina/agent-tutorial)[从零开始学多智能体应用开发](https://datawhaler.feishu.cn/wiki/N2IowK6YkigGoJkydS8cNWBZnGc)
+
 ## 目录
 
 **第一章：前期准备**
