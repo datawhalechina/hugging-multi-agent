@@ -10,7 +10,10 @@
     - 能**熟练阅读和理解项目源代码**的学习者
   - 兴趣与动机：适合对AI智能体领域充满热情的学习者，特别是那些希望从代码层面对智能体进行个性化能力开发的人。我们的课程旨在帮助学习者将理论知识转化为实际应用。
 
-项目在线教程：https://deepwisdom.feishu.cn/wiki/MLILw0EdRiyiYRkJLgOcskyAnUh
+项目在线教程（二月组队学习版**组队学习请阅读这篇文档**）：https://deepwisdom.feishu.cn/wiki/MLILw0EdRiyiYRkJLgOcskyAnUh  
+
+旧版在线教程（MetaGPT0.4 + Actionnode 特性学习）：https://deepwisdom.feishu.cn/wiki/KhCcweQKmijXi6kDwnicM0qpnEf  
+
 MetaGPT:https://github.com/geekan/MetaGPT
 
 ## 目录
